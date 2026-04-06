@@ -192,19 +192,7 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--dsc-color-btn-primary);
-}
-
-.dsc-btn-blue {
-    border: none;
-    background-color: var(--dsc-color-btn-primary);
-    color: var(--dsc-color-btn-inverse);
-}
-
-.dsc-btn-white {
-    background-color: var(--dsc-color-btn-inverse);
-    color: var(--dsc-color-btn-primary);
-    border: 1px solid var(--dsc-color-btn-primary);
+    cursor: pointer;
 }
 
 .dsc-btn-next-page {
