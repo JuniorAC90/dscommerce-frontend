@@ -15,7 +15,6 @@ export function get() : OrderDTO {
         cart.items.push(new OrderItemDTO(x.productId, x.quantity, x.name, x.price, x.imgUrl))
     });
 
-    console.log(cart);
     return cart;
 }
 

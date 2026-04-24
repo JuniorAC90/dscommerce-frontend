@@ -5,8 +5,9 @@ import ProductDetailsCard from "../../../components/ProductDetailsCard";
 import * as productService from '../../../services/product-service';
 import * as cartService from '../../../services/cart-service';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import type { ProductDTO } from '../../../models/product';
+import { ContextCartCount } from '../../../utils/context-cart';
 
 
 export default function ProductDetails() {
@@ -14,6 +15,8 @@ export default function ProductDetails() {
     const params = useParams();
 
     const navigate = useNavigate();
+
+    const {setContextCartCount} = useContext(ContextCartCount);
 
     const [product, setProduct] = useState<ProductDTO>();
 
@@ -30,6 +33,7 @@ export default function ProductDetails() {
     function handleBuyClick() {
         if (product) {
             cartService.addProduct(product);
+            setContextCartCount(cartService.getCart().items.length);
             navigate("/cart");
         }
     }
