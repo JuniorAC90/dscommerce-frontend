@@ -1,6 +1,5 @@
 import './styles.css';
 import { useState } from 'react';
-import { loginRequest } from '../../../services/auth-service';
 import type { CredentialsDTO } from '../../../models/auth';
 import * as authService from '../../../services/auth-service';
 
@@ -17,7 +16,6 @@ export default function Login() {
         authService.loginRequest(formData)
             .then(response => {
                 authService.saveAccessToken(response.data.access_token);
-                console.log(response.data);
             })
             .catch(error => {
                 console.log("Erro no login", error);
