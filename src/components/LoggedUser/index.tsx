@@ -1,3 +1,4 @@
+import './styles.css';
 import { Link } from 'react-router-dom';
 import * as authService from '../../services/auth-service';
 import { useContext } from 'react';
@@ -21,7 +22,7 @@ export default function LoggedUser() {
             </div>
         )
         : (
-            <Link to="/login">
+            <Link className='dsc-link-login' to="/login">
                 Entrar
             </Link>
         )

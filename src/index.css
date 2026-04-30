@@ -95,11 +95,6 @@ nav h1 {
     font-size: 16px;
 }
 
-nav a {
-    font-size: 14px;
-    font-weight: 700;
-}
-
 .dsc-navbar-right {
     display: flex;
     align-items: center;
