@@ -5,7 +5,6 @@ import ButtonNextPage from '../../../components/ButtonNextPage';
 import * as productService from '../../../services/product-service';
 import { useEffect, useState } from 'react';
 import type { ProductDTO } from '../../../models/product';
-import { hasAnyRoles } from '../../../services/auth-service';
 
 type QueryParams = {
     page: number;
