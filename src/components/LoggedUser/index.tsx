@@ -7,7 +7,6 @@ import { ContextToken } from '../../utils/context-token';
 export default function LoggedUser() {
 
     const { contextTokenPayload, setContextTokenPayload } = useContext(ContextToken);
-
     function handleLogoutClick() {
         authService.logout();
         setContextTokenPayload(undefined);
@@ -17,7 +16,7 @@ export default function LoggedUser() {
         contextTokenPayload && authService.isAuthenticated()
         ? (
             <div className="dsc-logged-user">
-                <p>{contextTokenPayload.user_name}</p>
+                <p>{contextTokenPayload.username}</p>
                 <span onClick={handleLogoutClick}>Sair</span>
             </div>
         )
