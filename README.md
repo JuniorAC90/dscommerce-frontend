@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# DSCommerce Frontend
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/JuniorAC90/dscommerce-frontend/blob/main/LICENSE) 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Sobre o projeto
 
-Currently, two official plugins are available:
+DSCommerce é uma aplicação web de e-commerce desenvolvida com ReactJS, consumindo uma API REST em Spring Boot.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O sistema simula um fluxo completo de loja virtual, incluindo navegação de produtos, carrinho de compras e autenticação de usuários.
 
-## React Compiler
+## 🎨 Layout
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Catálogo de produtos
+![Catálogo](src/assets/images/print_catalog.png)
 
-## Expanding the ESLint configuration
+### Detalhes do produto
+![Detalhes do produto](src/assets/images/print_product_details.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Carrinho de compras
+![Carrinho](src/assets/images/print_cart.png)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Login
+![Login](src/assets/images/print_login.png)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Área administrativa
+![Admin Home](src/assets/images/print_admin_home.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+![Admin Produtos](src/assets/images/print_admin_products.png)
+
+### Cadastro de produto
+![Cadastro de produto](src/assets/images/print_form_product.png)
+
+### Edição de produto
+![Edição de produto](src/assets/images/print_form_product_edit.png)
+
+### Confirmação de pedido
+![Confirmação](src/assets/images/print_confirmation.png)
+
+# Tecnologias utilizadas
+- React 19
+- TypeScript
+- Vite
+- Axios
+- React Router DOM 6
+
+
+# Como executar o projeto
+Pré-requisitos: Node.js
+
+```bash
+# clonar repositório
+git clone https://github.com/JuniorAC90/dscommerce-frontend.git
+
+# entrar na pasta do projeto 
+cd dscommerce-frontend
+
+# instalar dependências 
+yarn
+
+# executar o projeto 
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚠️ Observação
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Para funcionamento completo da aplicação, é necessário executar o [Backend](https://github.com/JuniorAC90/dscommerce-backend-aulas-cap04-3.4.3).
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+# Autor
+
+Aloizio da Costa Junior
+
+https://www.linkedin.com/in/JuniorAC90
